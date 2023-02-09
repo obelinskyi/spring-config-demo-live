@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config
+        git:
+          uri: https://github.com/obelinskyi/SpringConfigDemo
+server:
+  port: 8888
+
+encrypt:
+  key: ${SECRET_KEY}
